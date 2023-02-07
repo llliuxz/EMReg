@@ -21,19 +21,23 @@ Our model is implemented in the following environments：
 `docker pull registry.cn-hangzhou.aliyuncs.com/liuxzzz/em_registration:v4`
 
 # Data
-We acquire the experimental data by synthesizing the deformation field and generating the deformation images manually. Three datasets are used in our experiments: CREMI, FAFB, and FIB25. All the three datasets are open source and you can easily download them if needed:
+We acquire the experimental data by synthesizing the deformation field and generating the warped images manually. Three datasets are used in our experiments: CREMI, FAFB, and FIB25. All the three datasets are open source and you can easily download them if needed:
 - CREMI: [https://cremi.org/data](https://cremi.org/data)
 - FAFB: [https://temca2data.org/data.html](https://temca2data.org/data.html)
 - FIB25 [https://www.janelia.org/tools-and-data-release](https://www.janelia.org/tools-and-data-release)
 
-To add deformation to the EM images and simulate unregistered images, you can use the script `dvf_generation/create_deformation.py`. Adjust the parameter `flitter` to synthesize deformation of different sizes.
+To add deformation to the EM images and simulate unregistered image pairs, you can run:
+
+`python dvf_generation/create_deformation.py`
+
+Adjust the parameter `flitter` to synthesize deformation of different sizes.
 
 # Train
 Run the script `train.py` to start training. For example:
 
 `python train.py  --optim cosine --data cremi --label --batchsize 2`
 
-Adjust the necessary parameters according to the training data as well as your hardware.
+Adjust the necessary parameters according to your training data as well as the hardware equipment.
 
 # Acknowledgment
 This code is partially borrowed from [RAFT](https://github.com/princeton-vl/RAFT). 
