@@ -26,7 +26,7 @@ We acquire the experimental data by synthesizing the deformation field and gener
 - FAFB: [https://temca2data.org/data.html](https://temca2data.org/data.html)
 - FIB25 [https://www.janelia.org/tools-and-data-release](https://www.janelia.org/tools-and-data-release)
 
-To add deformation to the EM images and simulate unregistered images, you can use the script `dvf_generation/create_deformation.py`. 
+To add deformation to the EM images and simulate unregistered images, you can use the script `dvf_generation/create_deformation.py`. Adjust the parameter `flitter` to synthesize deformation of different sizes.
 
 # Train
 Run the script `train.py` to start training. For example:
