@@ -30,6 +30,7 @@ To add deformation to the EM images and simulate unregistered images, you can us
 
 # Train
 Run the script `train.py` to start training. For example:
+
 `python train.py  --optim cosine --data cremi --label --batchsize 2`
 
 Adjust the necessary parameters according to the training data as well as your hardware.
