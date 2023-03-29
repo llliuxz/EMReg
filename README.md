@@ -1,4 +1,4 @@
-# EM_Reg
+# EMReg
 The PyTorch implementation for paper:
 
 **Electron Microscopy Image Registration using Correlation Volume (ISBI 2023)**
